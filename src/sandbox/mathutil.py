@@ -20,3 +20,12 @@ def lerp(a: float, b: float, t: float) -> float:
     if t < 0 or t > 1:
         raise ValueError("t must be in [0, 1]")
     return a + (b - a) * t
+
+
+def sign(x: float) -> int:
+    """Return the sign of x: -1 if negative, 1 if positive, 0 otherwise."""
+    if x > 0:
+        return 1
+    if x < 0:
+        return -1
+    return 0
