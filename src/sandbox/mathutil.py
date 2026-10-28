@@ -1,5 +1,5 @@
 def safe_divide(a: float, b: float) -> float:
-    """Divide a by b.
+    """Compute a / b.
 
     Raises:
         ValueError: if b is zero.
