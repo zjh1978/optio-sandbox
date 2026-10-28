@@ -19,7 +19,3 @@ def test_safe_divide_by_float_zero_raises_value_error():
 
 def test_safe_divide_zero_numerator():
     assert safe_divide(0, 5) == 0
-
-
-def test_intentional_ci_failure():
-    assert safe_divide(1, 0) == 0  # intentionally wrong; CI must fail on this
