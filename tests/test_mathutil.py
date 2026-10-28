@@ -1,6 +1,6 @@
 import pytest
 
-from sandbox.mathutil import lerp, safe_divide
+from sandbox.mathutil import lerp, safe_divide, sign
 
 
 def test_safe_divide():
@@ -44,3 +44,16 @@ def test_lerp_t_below_zero_raises_value_error():
 def test_lerp_t_above_one_raises_value_error():
     with pytest.raises(ValueError, match="t must be in \\[0, 1\\]"):
         lerp(0, 1, 1.01)
+
+
+def test_sign_positive():
+    assert sign(3.5) == 1
+
+
+def test_sign_negative():
+    assert sign(-2) == -1
+
+
+def test_sign_zero():
+    assert sign(0) == 0
+    assert sign(-0.0) == 0
