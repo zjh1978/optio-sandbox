@@ -7,3 +7,16 @@ def safe_divide(a: float, b: float) -> float:
     if b == 0:
         raise ValueError("division by zero")
     return a / b
+
+
+def lerp(a: float, b: float, t: float) -> float:
+    """Linearly interpolate between a and b.
+
+    Returns a + (b - a) * t.
+
+    Raises:
+        ValueError: if t is outside the closed interval [0, 1].
+    """
+    if t < 0 or t > 1:
+        raise ValueError("t must be in [0, 1]")
+    return a + (b - a) * t
