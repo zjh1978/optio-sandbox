@@ -34,3 +34,8 @@ def sign(x: float) -> int:
 def halve(x: float) -> float:
     """Return half of x."""
     return x / 2
+
+
+def quarter(x: float) -> float:
+    """Return a quarter of x."""
+    return x / 4
