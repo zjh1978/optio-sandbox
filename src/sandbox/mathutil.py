@@ -29,3 +29,8 @@ def sign(x: float) -> int:
     if x < 0:
         return -1
     return 0
+
+
+def cube(x: float) -> float:
+    """Return x raised to the third power."""
+    return x * x * x

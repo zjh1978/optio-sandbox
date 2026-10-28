@@ -1,6 +1,6 @@
 import pytest
 
-from sandbox.mathutil import lerp, safe_divide, sign
+from sandbox.mathutil import cube, lerp, safe_divide, sign
 
 
 def test_safe_divide():
@@ -61,3 +61,10 @@ def test_sign_negative():
 def test_sign_zero():
     assert sign(0) == 0
     assert sign(-0.0) == 0
+
+
+def test_cube():
+    assert cube(3) == 27
+    assert cube(-2) == -8
+    assert cube(0) == 0
+    assert cube(0.5) == 0.125
