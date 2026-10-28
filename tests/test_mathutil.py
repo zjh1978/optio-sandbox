@@ -1,6 +1,6 @@
 import pytest
 
-from sandbox.mathutil import lerp, safe_divide
+from sandbox.mathutil import is_even, lerp, safe_divide
 
 
 def test_safe_divide():
@@ -44,3 +44,11 @@ def test_lerp_t_below_zero_raises_value_error():
 def test_lerp_t_above_one_raises_value_error():
     with pytest.raises(ValueError, match="t must be in \\[0, 1\\]"):
         lerp(0, 1, 1.01)
+
+
+def test_is_even():
+    assert is_even(0)
+    assert is_even(2)
+    assert is_even(-4)
+    assert not is_even(1)
+    assert not is_even(-3)
