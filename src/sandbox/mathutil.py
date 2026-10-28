@@ -4,6 +4,7 @@ def safe_divide(a: float, b: float) -> float:
     Raises:
         ValueError: if b is zero.
     """
+    # concurrency drill G2
     if b == 0:
         raise ValueError("division by zero")
     return a / b
