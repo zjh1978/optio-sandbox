@@ -1,6 +1,6 @@
 import pytest
 
-from sandbox.mathutil import lerp, safe_divide, sign
+from sandbox.mathutil import halve, lerp, quarter, safe_divide, sign
 
 
 def test_safe_divide():
@@ -61,3 +61,17 @@ def test_sign_negative():
 def test_sign_zero():
     assert sign(0) == 0
     assert sign(-0.0) == 0
+
+
+def test_halve():
+    assert halve(10) == 5
+    assert halve(3) == 1.5
+    assert halve(-4.0) == -2.0
+    assert halve(0) == 0
+
+
+def test_quarter():
+    assert quarter(8) == 2
+    assert quarter(1) == 0.25
+    assert quarter(-4.0) == -1.0
+    assert quarter(0) == 0
