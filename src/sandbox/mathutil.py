@@ -29,3 +29,7 @@ def sign(x: float) -> int:
     if x < 0:
         return -1
     return 0
+
+
+def double(x: float) -> float:
+    return x * 2
