@@ -1,6 +1,6 @@
 import pytest
 
-from sandbox.mathutil import safe_divide
+from sandbox.mathutil import clamp, safe_divide
 
 
 def test_safe_divide():
@@ -19,3 +19,20 @@ def test_safe_divide_by_float_zero_raises_value_error():
 
 def test_safe_divide_zero_numerator():
     assert safe_divide(0, 5) == 0
+
+
+def test_clamp_normal():
+    assert clamp(5, 0, 10) == 5
+
+
+def test_clamp_below():
+    assert clamp(-1, 0, 10) == 0
+
+
+def test_clamp_above():
+    assert clamp(15, 0, 10) == 10
+
+
+def test_clamp_lo_greater_than_hi():
+    with pytest.raises(ValueError, match=r"^lo must be <= hi$"):
+        clamp(1, 10, 0)
