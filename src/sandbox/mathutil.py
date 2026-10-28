@@ -29,3 +29,8 @@ def sign(x: float) -> int:
     if x < 0:
         return -1
     return 0
+
+
+def halve(x: float) -> float:
+    """Return half of x."""
+    return x / 2
