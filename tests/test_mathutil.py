@@ -44,3 +44,7 @@ def test_lerp_t_below_zero_raises_value_error():
 def test_lerp_t_above_one_raises_value_error():
     with pytest.raises(ValueError, match="t must be in \\[0, 1\\]"):
         lerp(0, 1, 1.01)
+
+
+def test_g1():
+    assert safe_divide(4, 2) == 2
