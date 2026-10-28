@@ -29,3 +29,8 @@ def sign(x: float) -> int:
     if x < 0:
         return -1
     return 0
+
+
+def square(x: float) -> float:
+    """Return x multiplied by itself."""
+    return x * x
