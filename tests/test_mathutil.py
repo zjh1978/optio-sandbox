@@ -1,6 +1,10 @@
 import pytest
 
-from sandbox.mathutil import lerp, safe_divide, sign
+from sandbox.mathutil import double, lerp, safe_divide, sign
+
+
+def test_double():
+    assert double(3.5) == 7.0
 
 
 def test_safe_divide():
